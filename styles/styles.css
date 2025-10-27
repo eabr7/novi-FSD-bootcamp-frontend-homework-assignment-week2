@@ -30,19 +30,22 @@ Table of Contents:
 
 body {
     font-family: "Poppins", sans-serif;
+    color: var(--dark-green-color);
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+    border: transparent;
+    border-radius: 15px;
 }
 
 a {
     text-decoration: none;
-    cursor: default;
     pointer-events: visible;
     color: var(--dark-green-color);
+    cursor: pointer;
 }
 
 /*////////////////////////
@@ -53,6 +56,9 @@ h1 {
     font-size: 90px;
 }
 
+h2 {
+    padding-bottom: 30px;
+}
 
 /*////////////////////////
     3. Layout
@@ -73,7 +79,6 @@ h1 {
     align-items: center;
     margin: 10px 10px 245px 10px;
     flex-basis: 1000px;
-    color: var(--dark-green-color);
 }
 
 .main-group-inner-container {
@@ -82,8 +87,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    flex-basis: 500px;
+    margin: 50px 250px 30px 250px;
+    flex-basis: 400px;
 }
 
 .main-content-group {
@@ -151,15 +156,59 @@ button {
 
 /*///////////// 4.2 Testimonial /////////////*/
 
+.quote-container {
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 2px 5px 15px var(--grey-color);
+    margin: 10px 20px;
+    padding: 80px;
+}
+
+.quote-container blockquote, cite {
+    padding: 10px;
+}
 
 
 /*///////////// 4.3 Support /////////////*/
 
+.support p {
+    align-self: flex-start;
+    padding: 30px 10px 10px 5px;
+}
 
+.team-link {
+    color: var(--grey-color);
+    text-decoration: underline;
+}
+
+.main-button {
+    padding: 18px;
+    font-size: small;
+    margin: 5px;
+    background-color: var(--dark-green-color);
+    color: white;
+    border: solid transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    align-self: flex-start;
+}
 
 /*///////////// 4.4 Faq /////////////*/
 
+.list-main {
+    border: dashed yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 
+}
+
+details {
+    display: flex;
+    flex-wrap: wrap;
+    border: dashed darkgreen;
+}
 
 /*///////////// 4.5 Footer /////////////*/
 
