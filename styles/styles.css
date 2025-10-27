@@ -9,6 +9,7 @@ Table of Contents:
         4.3 Support
         4.4 Faq
         4.5 Footer
+    5. Queries
 ////////////////////////////////////////////////////////////////////////*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -82,17 +83,15 @@ h2 {
 }
 
 .main-group-inner-container {
-    border: dashed pink;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px 250px 30px 250px;
+    margin: 50px 200px 30px 200px;
     flex-basis: 400px;
 }
 
 .main-content-group {
-    border: dashed blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,8 +107,9 @@ h2 {
 
 header {
     background-image: url("../assets/images/mountains.jpg");
-    background-size: auto;
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header-content {
@@ -117,7 +117,7 @@ header {
 
 }
 
-ul {
+header nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -161,11 +161,30 @@ button {
     border-radius: 10px;
     box-shadow: 2px 5px 15px var(--grey-color);
     margin: 10px 20px;
-    padding: 80px;
+    padding: 60px;
 }
 
 .quote-container blockquote, cite {
     padding: 10px;
+}
+
+.quote-icon-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.avatar-cite-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.quote-icon {
+    width: 20px; height: 20px;
+}
+
+.cite-avatar {
+    width: 50px; height: 50px;
 }
 
 
@@ -196,18 +215,46 @@ button {
 /*///////////// 4.4 Faq /////////////*/
 
 .list-main {
-    border: dashed yellowgreen;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    width: min(800px, 100%);
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    gap: 5px;
+
+    /*border: dashed yellowgreen;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: flex-start;*/
+    /*align-items: flex-start;*/
 
 }
 
 details {
-    display: flex;
-    flex-wrap: wrap;
-    border: dashed darkgreen;
+    display: block;
+    padding: 16px 20px;
+    border-radius: 8px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 500;
+    content: "▶";
+}
+
+details p {
+    padding: 50px;
+    margin: 20px;
+    background: #678F7B;
+    color: white;
+    border-radius: 20px;
+}
+
+details:hover {
+    cursor: pointer;
+}
+
+.main-ul {
+    list-style: none;
 }
 
 /*///////////// 4.5 Footer /////////////*/
@@ -218,4 +265,49 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: small;
+}
+
+
+/*////////// 5.0 Queries ////////////*/
+
+/* Base (mobile-first): keep what I posted above */
+
+/* ≥ 768px (tablets) */
+@media (min-width: 768px) {
+    h1 { font-size: clamp(40px, 6vw, 72px); }
+    .list-main { gap: 20px; }
+    details { padding: 18px 22px; }
+}
+
+/* ≥ 1024px (desktops) */
+@media (min-width: 1024px) {
+    .list-main { width: min(900px, 100%); }
+    details { padding: 20px 24px; }
+}
+
+/* ≤ 420px (very small screens) */
+@media (max-width: 420px) {
+    h1 { font-size: 36px; }
+    .quote-container { padding: 24px; }
+    .header-group-inner-container { margin: 10px; }
+    ul { gap: 24px; }
+    .button-link, button { font-size: 14px; padding: 10px 12px; }
+}
+
+/* ≤ 360px: ultra-klein */
+@media (max-width: 360px) {
+    h1 { font-size: 30px; }
+    .header-group-inner-container { margin: 8px; }
+    .quote-container { padding: 18px; }
+    .main-group-inner-container { margin: 24px 12px; }
+    .button-link { padding: 10px 12px; }
+}
+
+/* 421–767px: phones */
+@media (max-width: 767px) {
+    h1 { font-size: clamp(32px, 8vw, 48px); }
+    header nav ul { justify-content: center; gap: clamp(8px, 5vw, 20px); }
+    .quote-container { padding: 24px; }
+    .list-main { width: 100%; padding: 0 12px; }
+    details > p { margin-left: 20px; padding: 16px 18px; }
 }

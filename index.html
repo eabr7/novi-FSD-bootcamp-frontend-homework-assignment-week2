@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Domein.shop</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header class="header-outer-container">
@@ -24,24 +25,32 @@
     </div>
 </header>
 <main class="main-outer-container">
-    <div class="main-content-group">
+    <section class="main-content-group">
         <article class="main-group-inner-container">
             <h2>Wat zeggen klanten over ons</h2>
             <div class="quote-container">
-                <img class="quote-icon" src="assets/icons/quote-left.png"/>
-                <blockquote>Al jaren klant bij Domein.shop. De service is goed en medewerkers zijn zeer klantvriendelijk.
+                <div class="quote-icon-row">
+                    <img class="quote-icon" src="assets/icons/quote-left.png"/>
+                    <blockquote>Al jaren klant bij Domein.shop. De service is goed en medewerkers zijn zeer klantvriendelijk.
                     Snelle response, zelfs op momenten dat je het niet verwacht.
-                </blockquote>
-                <img class="cite-avatar" src="assets/images/avatar-jane.png" />
-                <cite>Jane Doe, Managing Director</cite>
+                    </blockquote>
+                </div>
+                <div class="avatar-cite-row">
+                    <img class="cite-avatar" src="assets/images/avatar-jane.png" />
+                    <cite>Jane Doe, Managing Director</cite>
+                </div>
             </div>
             <div class="quote-container">
-                <img class="quote-icon" src="assets/icons/quote-left.png"/>
-                <blockquote>Ik ben tevreden over Domein.shop. Met name de snelle reactie op mijn vragen en goede service
+                <div class="quote-icon-row">
+                    <img class="quote-icon" src="assets/icons/quote-left.png"/>
+                    <blockquote>Ik ben tevreden over Domein.shop. Met name de snelle reactie op mijn vragen en goede service
                     maakt dat ik TransIP aan iedereen aanbeveel.
-                </blockquote>
-                <img class="cite-avatar" src="assets/images/avatar-john.png" />
-                <cite>John Smith, Frontend Developer</cite>
+                    </blockquote>
+                </div>
+                <div class="avatar-cite-row">
+                    <img class="cite-avatar" src="assets/images/avatar-john.png" />
+                    <cite>John Smith, Frontend Developer</cite>
+                </div>
             </div>
         </article>
         <article class="main-group-inner-container support">
@@ -53,7 +62,7 @@
         <article class="main-group-inner-container">
             <h2>Veelgestelde vragen</h2>
             <div class="list-main">
-                <ul>
+                <ul class="main-ul">
                     <li>
                         <details>
                             <summary>Wat is een goede domeinnaam?</summary>
@@ -108,7 +117,7 @@
                 </ul>
             </div>
         </article>
-    </div>
+    </section>
 </main>
 <footer>
     <p>Copyright © 2022, all rights reserved.</p>
