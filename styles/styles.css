@@ -58,7 +58,7 @@ h1 {
     3. Layout
 ////////////////////////*/
 
-.outer-container {
+.header-outer-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,7 +66,7 @@ h1 {
     width: 100%;
 }
 
-.group-inner-container {
+.header-group-inner-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,11 +76,28 @@ h1 {
     color: var(--dark-green-color);
 }
 
+.main-group-inner-container {
+    border: dashed pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-basis: 500px;
+}
+
+.main-content-group {
+    border: dashed blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: 10px;
+}
 
 /*////////////////////////
     4. Areas
 ////////////////////////*/
-
 
 /*///////////// 4.1 Header /////////////*/
 
@@ -145,7 +162,6 @@ button {
 
 
 /*///////////// 4.5 Footer /////////////*/
-
 
 footer {
     background: var(--dark-green-color);
